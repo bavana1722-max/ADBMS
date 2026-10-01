@@ -1,4 +1,4 @@
-create table student (Sid number(3),sname varchar2(20),smark number(3));
+create table student (Sid number(3),sname varchar(20),smark number(3));
 
 insert into student values (101, 'bavana', 85);
 insert into student values (102, 'gaja', 78);
