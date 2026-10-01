@@ -1,0 +1,9 @@
+declare
+n number :=:enter;
+total number :=0;
+begin 
+for i in 1..n loop
+total :=total + i;
+end loop;
+dbms_output.put_line('sum = ' || total);
+end;
