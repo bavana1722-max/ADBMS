@@ -1,0 +1,29 @@
+create table class_a (name varchar(20));
+
+create table class_b (name varchar(20));
+
+insert into class_a values ('bavana');
+insert into class_a values ('gaja');
+insert into class_a values ('savi');
+insert into class_a values ('keerthi');
+
+insert into class_b values ('savi');
+insert into class_b values ('keerthi');
+insert into class_b values ('raji');
+insert into class_b values ('hema');
+
+select name from class_a
+UNION
+select name from class_b;
+
+select name from class_a
+UNION ALL
+select name from class_b;
+
+select name from class_a
+INTERSECT
+select name from class_b;
+
+select name from class_a
+MINUS
+select name from class_b;
