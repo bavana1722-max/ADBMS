@@ -1,0 +1,14 @@
+create table student (sid number(3),sname varchar2(20));
+
+insert into student values (101, 'bavana');
+insert into student values (102, 'gaja');
+insert into student values (103, 'savi');
+insert into student values (104, 'keerthi');
+
+alter table student add mark number(3);
+
+select * from student;
+
+alter table student drop column mark;
+
+select * from student;
