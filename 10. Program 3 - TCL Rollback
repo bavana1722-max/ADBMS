@@ -5,10 +5,6 @@ insert into student values (102, 'gaja');
 insert into student values (103, 'savi');
 insert into student values (104, 'keerthi');
 
-commit;
-
-delete from student where sid = 104;
-
 rollback;
 
 select * from student;
