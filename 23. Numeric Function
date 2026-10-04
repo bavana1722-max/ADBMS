@@ -1,0 +1,5 @@
+select abs(200/3) from dual;
+select power(2,3) from dual;
+select sqrt(64) from dual;
+select round(25.678) from dual;
+select sin(30) from dual;
