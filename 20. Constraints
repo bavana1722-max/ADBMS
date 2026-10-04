@@ -1,0 +1,9 @@
+create table food(fid number(10), fname varchar(20) unique); 
+insert into food values(01,'dosa'); 
+insert into food values(02,'dosa');
+alter table food add constraint tk primary key(fid); 
+insert into food values(01,'puri');
+create table hotel(fid number(10), fname varchar(20), foreign key(fid) references food(fid)); 
+insert into hotel values(03,'pongal');
+alter table food add constraint ck check(fid<20); 
+insert into food values(21,'idly');
