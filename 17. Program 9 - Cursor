@@ -1,0 +1,37 @@
+create table studet1 (id number(3),name varchar2(20));
+
+insert into studet1 values (101, 'bavana');
+insert into studet1 values (102, 'gaja');
+insert into studet1 values (103, 'savi');
+insert into studet1 values (104, 'keerthi');
+select * from studet1
+
+begin
+    update studet1 set name = 'raji' where id = 104;
+
+    if sql%found then
+        dbms_output.put_line('record updated successfully');
+    end if;
+
+    dbms_output.put_line('number of rows updated = ' || sql%rowcount);
+end;
+
+declare
+    cursor c1 is
+        select id, name from studet;
+
+    v_id studet.id%type;
+    v_name studet.name%type;
+begin
+    open c1;
+
+    loop
+        fetch c1 into v_id, v_name;
+        exit when c1%notfound;
+
+        dbms_output.put_line(v_id || ' ' || v_name);
+    end loop;
+
+    close c1;
+end;
+
