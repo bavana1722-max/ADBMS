@@ -1,13 +1,11 @@
-create table student (sid number(3),sname varchar2(20));
+create table studentt (sid number(3),sname varchar2(20));
 
-insert into student values (101, 'bavana');
-insert into student values (102, 'gaja');
+insert into studentt values (101, 'bavana');
+insert into studentt values (102, 'gaja');
 
-savepoint a;
+begin
+savepoint p;
+end;
 
-insert into student values (103, 'savi');
-insert into student values (104, 'keerthi');
-
-rollback to a;
-
-select * from student;
+insert into studentt values (103, 'savi');
+insert into studentt values (104, 'keerthi');
