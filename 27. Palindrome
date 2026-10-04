@@ -1,0 +1,14 @@
+declare
+    str varchar2(100) :=:enter;
+    rev varchar2(100) := '';
+begin
+    for i in reverse 1..length(str) loop
+        rev := rev || substr(str, i, 1);
+    end loop;
+
+    if lower(str) = lower(rev) then
+        dbms_output.put_line('palindrome');
+    else
+        dbms_output.put_line('not a palindrome');
+    end if;
+end;
