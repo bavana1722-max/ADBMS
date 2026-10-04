@@ -1,0 +1,18 @@
+declare
+    a number := :enter1;
+    b number := :enter2;
+begin
+    dbms_output.put_line('addition = ' || (a + b));
+    dbms_output.put_line('subtraction = ' || (a - b));
+    dbms_output.put_line('multiplication = ' || (a * b));
+    dbms_output.put_line('division = ' || (a / b));
+    dbms_output.put_line('remainder = ' || mod(a, b));
+
+    if a > b then
+        dbms_output.put_line('a is greater than b');
+    elsif a < b then
+        dbms_output.put_line('a is less than b');
+    else
+        dbms_output.put_line('a and b are equal');
+    end if;
+end;
