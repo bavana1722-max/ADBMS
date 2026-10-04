@@ -1,0 +1,11 @@
+select upper('database') from dual;
+
+select lower('DATABASE') from dual;
+
+select initcap('database management system') from dual;
+
+select length('database') from dual;
+
+select substr('database', 1, 4) from dual;
+
+select replace('database', 'a', 'x') from dual;
