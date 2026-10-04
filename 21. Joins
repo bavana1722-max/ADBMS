@@ -1,0 +1,16 @@
+create table stud4(sid number(10),sname varchar(20),splace varchar(20));
+insert into stud4 values(1,'savitha','thirukovilur')
+insert into stud4 values(2,'gaja','thindivanam')
+insert into stud4 values(3,'keerthi','pondy')
+insert into stud4 values(4,'hema','villupuram')
+create table employe1(eid number(10),ename varchar(20),esalary number(20));
+insert into employe1 values(1,'savitha',2000)
+insert into employe1 values(2,'gaja',5000)
+insert into employe1 stud3 values(5,'keerthi',6000)
+insert into employe1 values(4,'hema',7000)
+select stud4.sname,esalary,sid from stud4 INNER JOIN employe1 on stud4.sid=employe1.eid;
+select stud4.sname,esalary,sid from stud4 LEFT OUTER JOIN employe1 on stud4.sid=employe1.eid;
+select stud4.sname,esalary,sid from stud4 RIGHT OUTER JOIN employe1 on stud4.sid=employe1.eid;
+select * from stud4 NATURAL FULL JOIN employe1;
+
+
