@@ -1,0 +1,12 @@
+create table book (bid number(10) primary key, title varchar (20),author_name varchar(20),pub_year number(10));
+insert into book values (1,'python','guido',2004)
+insert into book values (2,'java','james',2005)
+insert into book values (3,'dbms','bavana',2006)
+insert into book values (4,'micro','gaja',2007)
+select bid,title,author_name,pub_year from book where pub_year in (2004,2007,2006);
+select bid,title,author_name,pub_year from book where pub_year not in (2005,2006);
+select bid,title,author_name,pub_year from book where bid not in (1,2);
+select bid,title,author_name,pub_year from book where bid between 1 and 4;
+select bid,title,author_name,pub_year from book where bid not between 1 and 3;
+select * from book order by author_name ;
+select distinct author_name from book ;
