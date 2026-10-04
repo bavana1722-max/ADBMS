@@ -1,0 +1,10 @@
+create table maths(sid number(10),sname varchar(20),marks number(10));
+insert into maths values(1,'keerthi',98);
+insert into maths values(2,'hema',99);
+insert into maths values(3,'gaja',97);
+insert into maths values(4,'raji',96);
+select sum (marks) "Total" from maths;
+select max (marks)"Maximum mark" from maths;
+select min (marks)"Minimum mark" from maths;
+select avg (marks)"Average mark" from maths;
+select count(*) from maths;
