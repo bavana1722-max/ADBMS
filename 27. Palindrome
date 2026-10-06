@@ -1,5 +1,6 @@
+set serveroutput on;
 declare
-    str varchar2(100) :=:enter;
+    str varchar2(100) :=&enter;
     rev varchar2(100) := '';
 begin
     for i in reverse 1..length(str) loop
@@ -12,3 +13,4 @@ begin
         dbms_output.put_line('not a palindrome');
     end if;
 end;
+/
