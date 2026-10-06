@@ -1,6 +1,7 @@
+set serveroutput on;
 declare
-    a number := :enter1;
-    b number := :enter2;
+    a number := &enter1;
+    b number := &enter2;
 begin
     dbms_output.put_line('addition = ' || (a + b));
     dbms_output.put_line('subtraction = ' || (a - b));
@@ -16,3 +17,4 @@ begin
         dbms_output.put_line('a and b are equal');
     end if;
 end;
+/
