@@ -1,6 +1,7 @@
+set serveroutput on;
 declare
-    a number := :enter1;
-    b number := :enter2;
+    a number := &enter1;
+    b number := &enter2;
     g number;
 begin
     for i in 1..least(a, b) loop
@@ -11,3 +12,4 @@ begin
 
     dbms_output.put_line('gcd = ' || g);
 end;
+/
