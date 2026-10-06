@@ -1,5 +1,6 @@
+set serveroutput on;
 declare
-n number :=:enter;
+n number :=&enter;
 a number := 0;
 b number := 1;
 c number;
@@ -12,3 +13,4 @@ a :=b;
 b :=c;
 end loop;
 end;
+/
